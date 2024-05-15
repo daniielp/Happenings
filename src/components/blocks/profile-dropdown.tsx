@@ -29,7 +29,7 @@ export function ProfileDropdown({ className, ...props }: ProfileDropdownProps) {
           className={cn("size-8 rounded-full", className)}
         >
           <Avatar className="size-8">
-            <AvatarImage src="/profile/markus.png" alt="Markus Sørensen" />
+            <AvatarImage src="/profile/markus.jpg" alt="Markus Sørensen" />
             <AvatarFallback>MS</AvatarFallback>
           </Avatar>
         </Button>

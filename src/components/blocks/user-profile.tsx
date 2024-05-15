@@ -11,7 +11,6 @@ import {
 export function UserProfile() {
   return (
     <div>
-      <p className="text-xs text-slate-900/80 mb-1">Vælg profil</p>
       <Select defaultValue="markus-soerensen">
         <SelectTrigger className="w-full">
           <SelectValue placeholder="Vælg en profil" />

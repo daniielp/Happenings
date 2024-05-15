@@ -16,21 +16,6 @@ import {
 } from "lucide-react";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "~/components/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "~/components/ui/dropdown-menu";
 import { Input } from "~/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "~/components/ui/sheet";
 import { usePathname } from "next/navigation";
@@ -38,7 +23,7 @@ import { cn } from "~/lib/utils";
 import Image from "next/image";
 import { UserProfile } from "~/components/blocks/user-profile";
 import { ProfileDropdown } from "~/components/blocks/profile-dropdown";
-
+import { Toaster } from "~/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -111,7 +96,8 @@ export default function RootLayout({
                 </nav>
               </div>
               <div className="mt-auto p-4">
-                  <UserProfile />
+                <p className="text-xs text-slate-900/80 mb-1">Vælg profil</p>
+                <UserProfile />
               </div>
             </div>
           </div>
@@ -162,20 +148,6 @@ export default function RootLayout({
                     ))}
                   </nav>
                   <div className="mt-auto">
-                    {/* <Card>
-                      <CardHeader>
-                        <CardTitle>Upgrade to Pro</CardTitle>
-                        <CardDescription>
-                          Unlock all features and get unlimited access to our
-                          support team.
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <Button size="sm" className="w-full">
-                          Upgrade
-                        </Button>
-                      </CardContent>
-                    </Card> */}
                     <UserProfile />
                   </div>
                 </SheetContent>
@@ -199,6 +171,7 @@ export default function RootLayout({
             </main>
           </div>
         </div>
+        <Toaster />
       </body>
     </html>
   );

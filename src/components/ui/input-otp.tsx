@@ -68,4 +68,14 @@ const InputOTPSeparator = React.forwardRef<
 ))
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
+const InputOTPTimeSeparator = React.forwardRef<
+  React.ElementRef<"div">,
+  React.ComponentPropsWithoutRef<"div">
+>(({ ...props }, ref) => (
+  <div ref={ref} role="separator" {...props}>
+    :
+  </div>
+))
+InputOTPTimeSeparator.displayName = "InputOTPTimeSeparator"
+
+export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator, InputOTPTimeSeparator }
