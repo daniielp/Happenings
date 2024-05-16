@@ -1,4 +1,3 @@
-import { EllipsisVerticalIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -10,25 +9,9 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
+import { yourEvents } from "~/data/events";
 
-const events = [
-  {
-    name: "Fredagsbar",
-    initials: "GA",
-    href: "#",
-    members: 16,
-    bgColor: "bg-slate-600",
-    image_url: "/events/event1.jpg",
-  },
-  {
-    name: "Studiestartsfest",
-    initials: "CD",
-    href: "#",
-    members: 12,
-    bgColor: "bg-slate-800",
-    image_url: "/events/event2.jpg",
-  },
-];
+
 
 export function EventCard() {
   return (
@@ -41,7 +24,7 @@ export function EventCard() {
       </CardHeader>
       <CardContent>
         <ul className="mt-3 grid grid-cols-1 gap-5 sm:gap-6">
-          {events.map((event) => (
+          {yourEvents.map((event) => (
             <li
               key={event.name}
               className="col-span-1 flex rounded-md shadow-sm group group-hover:bg-gray-100"

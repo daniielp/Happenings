@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { PreviewCard } from "~/components/blocks/preview-card";
 import {
@@ -8,45 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
+import { events } from "~/data/events";
 
-const events = [
-  {
-    id: 1,
-    title: "Kapsejlads 2024",
-    href: "#",
-    imageUrl: "/events/event3.jpg",
-    date: "Maj 3, 2024",
-    datetime: "2024-05-3",
-    author: {
-      name: "Kapsejladsen",
-      imageUrl: "/organizations/kapsejlads.jpg",
-    },
-  },
-  {
-    id: 1,
-    title: "End of semester party",
-    href: "#",
-    imageUrl: "/events/event1.jpg",
-    date: "Maj 25, 2024",
-    datetime: "2024-05-25",
-    author: {
-      name: "Erhversakademi Aarhus",
-      imageUrl: "/organizations/erhversakademi-aarhus.png",
-    },
-  },
-  {
-    id: 1,
-    title: "Fed Fredag - Rasmus Seebach",
-    href: "#",
-    imageUrl: "/events/event4.jpg",
-    date: "Juni 14, 2024",
-    datetime: "2024-06-14",
-    author: {
-      name: "Tivoli Friheden",
-      imageUrl: "/organizations/friheden.png",
-    },
-  },
-];
+
 
 export function NewEvents() {
   return (

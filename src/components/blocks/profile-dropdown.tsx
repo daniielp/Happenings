@@ -12,7 +12,7 @@ import {
   DropdownMenuShortcut,
   DropdownMenuSubTrigger,
 } from "~/components/ui/dropdown-menu";
-import { Home, LogOut, Settings, StickyNote } from "lucide-react";
+import { LogOut, Settings } from "lucide-react";
 import React from "react";
 import { Button } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
