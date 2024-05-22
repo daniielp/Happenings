@@ -68,11 +68,6 @@ export function CreateEvent() {
   function onSubmit(data: z.infer<typeof CreateEventSchema>) {
     toast({
       title: "Vi har oprettet din begivenhed",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
     });
 
     form.reset();
@@ -256,14 +251,11 @@ export function CreateEvent() {
                 </FormItem>
               )}
             />
-
             <Button type="submit" className="w-full">
               Opret begivenhed
             </Button>
           </form>
         </Form>
-
-        <DialogFooter></DialogFooter>
       </DialogContent>
     </Dialog>
   );
