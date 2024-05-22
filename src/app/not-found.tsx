@@ -17,7 +17,7 @@ const team = [
   {
     name: "Markus Sørensen",
     role: "Event ansvarlig",
-    image_url: "/profile/markus.jpg",
+    image_url: "/images/profile/markus.jpg",
   },
 ];
 
