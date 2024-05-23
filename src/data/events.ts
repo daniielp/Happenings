@@ -2,7 +2,7 @@ export const events = [
     {
       id: 1,
       title: "Kapsejlads 2024",
-      href: "#",
+      href: "event/kapsejlads-2024",
       imageUrl: "/images/events/event3.jpg",
       date: "Maj 3, 2024",
       datetime: "2024-05-3",
@@ -14,7 +14,7 @@ export const events = [
     {
       id: 1,
       title: "End of semester party",
-      href: "#",
+      href: "/event/end-of-semester-party",
       imageUrl: "/images/events/event1.jpg",
       date: "Maj 25, 2024",
       datetime: "2024-05-25",
@@ -26,7 +26,7 @@ export const events = [
     {
       id: 1,
       title: "Fed Fredag - Rasmus Seebach",
-      href: "#",
+      href: "/event/fed-fredag-rasmus-seebach",
       imageUrl: "/images/events/event4.jpg",
       date: "Juni 14, 2024",
       datetime: "2024-06-14",
@@ -41,7 +41,7 @@ export const yourEvents = [
     {
       name: "Fredagsbar",
       initials: "GA",
-      href: "#",
+      href: "/event/fredagsbar",
       members: 16,
       bgColor: "bg-slate-600",
       image_url: "/images/events/event1.jpg",
@@ -49,7 +49,7 @@ export const yourEvents = [
     {
       name: "Studiestartsfest",
       initials: "CD",
-      href: "#",
+      href: "/event/studiestartsfest",
       members: 12,
       bgColor: "bg-slate-800",
       image_url: "/images/events/event2.jpg",
