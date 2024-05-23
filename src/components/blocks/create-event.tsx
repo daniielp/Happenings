@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { z } from "zod";
 import { Button } from "~/components/ui/button";
+import type { ButtonProps } from "~/components/ui/button";
 import { format } from "date-fns";
 import {
   Dialog,
@@ -60,7 +61,10 @@ const CreateEventSchema = z.object({
   description: z.string({ required_error: "Nødvendig" }).optional(),
 });
 
-export function CreateEvent() {
+interface CreateEventProps extends ButtonProps {}
+
+export function CreateEvent({ ...props }: CreateEventProps) {
+  const [open, setOpen] = useState(false);
   const form = useZodForm({
     schema: CreateEventSchema,
   });
@@ -70,13 +74,23 @@ export function CreateEvent() {
       title: "Vi har oprettet din begivenhed",
     });
 
-    form.reset();
+    form.reset({
+      description: "",
+      end_date: undefined,
+      event_title: "",
+      organizator_id: "",
+      start_date: undefined,
+      start_time: "",
+      visibility: undefined,
+    });
+
+    setOpen(false)
   }
 
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger>
-        <Button className="w-full">Opret begivenhed</Button>
+        <Button {...props} className="w-full">Opret begivenhed</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
