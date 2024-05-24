@@ -16,7 +16,7 @@ import { cn } from "~/lib/utils";
 import Image from "next/image";
 import { UserProfile } from "~/components/blocks/user-profile";
 import { ProfileDropdown } from "~/components/blocks/profile-dropdown";
-import { Toaster } from "~/components/ui/toaster";
+import { Toaster } from "~/components/ui/sonner";
 import { CreateEvent } from "~/components/blocks/create-event";
 import { NavItems } from "~/components/blocks/nav-items";
 import { navigation } from "~/data/menu";

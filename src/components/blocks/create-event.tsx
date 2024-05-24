@@ -46,7 +46,7 @@ import {
   InputOTPSlot,
   InputOTPTimeSeparator,
 } from "~/components/ui/input-otp";
-import { toast } from "~/components/ui/use-toast";
+import { toast } from "sonner";
 import { Textarea } from "~/components/ui/textarea";
 
 const OTP_LENGTH = 4;
@@ -70,9 +70,7 @@ export function CreateEvent({ ...props }: CreateEventProps) {
   });
 
   function onSubmit(data: z.infer<typeof CreateEventSchema>) {
-    toast({
-      title: "Vi har oprettet din begivenhed",
-    });
+    toast("Vi har oprettet din begivenhed");
 
     form.reset({
       description: "",
