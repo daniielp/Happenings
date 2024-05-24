@@ -7,12 +7,12 @@ const team = [
   {
     name: "Rasmus Jensing",
     role: "CEO",
-    image_url: "/team/rasmus.jpg",
+    image_url: "/images/team/rasmus.jpg",
   },
   {
     name: "Daniel Pedersen",
     role: "Udvikler",
-    image_url: "/team/daniel.jpg",
+    image_url: "/images/team/daniel.jpg",
   },
   {
     name: "Markus Sørensen",
