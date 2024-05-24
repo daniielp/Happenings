@@ -2,42 +2,36 @@ export const users = [
     {
       name: "Rasmus Jensing",
       role: "Co-Founder / CEO",
-      imageUrl: "/team/rasmus.jpg",
+      imageUrl: "images//team/rasmus.jpg",
     },
     {
       name: "Daniel Pedersen",
       role: "Studerende",
-      imageUrl: "/team/daniel.jpg",
+      imageUrl: "/images/team/daniel.jpg",
     },
     {
       name: "Philip Munksgaard",
       role: "Studerende",
-      imageUrl: "/team/daniel.jpg",
+      imageUrl: "/images/team/daniel.jpg",
     },
     {
       name: "Jonas Kristensen",
       role: "Studerende",
-      imageUrl: "/team/rasmus.jpg",
+      imageUrl: "/images/team/rasmus.jpg",
     },
     {
       name: "Gertrud Madsen",
       role: "Studerende",
-      imageUrl: "/team/daniel.jpg",
+      imageUrl: "",
     },
     {
       name: "Cecilie Jensen",
       role: "Studerende",
-      imageUrl: "/team/rasmus.jpg",
+      imageUrl: "",
     },
     {
       name: "Philip Munksgaard",
       role: "Studerende",
-      imageUrl: "/team/daniel.jpg",
+      imageUrl: "",
     },
-    {
-      name: "Philip Munksgaard",
-      role: "Studerende",
-      imageUrl: "/team/rasmus.jpg",
-    },
-    // More people...
   ];
