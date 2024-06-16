@@ -7,6 +7,7 @@ import { Switch } from "~/components/ui/switch";
 export function UserPreferences() {
   const router = useRouter();
   const pathname = usePathname();
+  
 
   function updateStep() {
     router.push(`${pathname}?step=4`);
