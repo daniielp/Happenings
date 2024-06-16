@@ -1,8 +1,12 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { SignUp } from "../_steps/sign-up";
-import { useSearchParams } from "next/navigation";
+import { redirect, useSearchParams } from "next/navigation";
 import { ConnectSchool } from "~/app/onboarding/_steps/connect-school";
+import { UploadProfile } from "~/app/onboarding/_steps/upload-profile";
+import { UserPreferences } from "~/app/onboarding/_steps/user-preferences";
+import { CreatePin } from "~/app/onboarding/_steps/create-pin";
+import { Skeleton } from "~/components/ui/skeleton";
 
 export function OnboardingFlow() {
   const searchParams = useSearchParams();
@@ -10,16 +14,20 @@ export function OnboardingFlow() {
 
   function renderStep() {
     switch (step) {
+      case "4":
+        return <CreatePin />;
+      case "3":
+        return <UserPreferences />;
       case "2":
-        return <ConnectSchool />;
+        return <UploadProfile />;
       default:
-        return <SignUp />;
+        return <ConnectSchool />;
     }
   }
 
   return (
     <div className="bg-white p-4 rounded-lg">
-      {renderStep()}
+      <Suspense fallback={<Skeleton className="h-full" />}>{renderStep()}</Suspense>
     </div>
   );
 }

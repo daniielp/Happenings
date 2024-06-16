@@ -133,7 +133,7 @@ export function ConnectSchool() {
   const [selectedSchool, setSelectedSchool] = useState<string | null>(null);
 
   function updateStep() {
-    router.push(`${pathname}?step=3`);
+    router.push(`${pathname}?step=2`);
   }
 
   return (
