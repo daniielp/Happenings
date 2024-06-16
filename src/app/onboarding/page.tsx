@@ -1,14 +1,17 @@
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import { CircleCheckBig } from "lucide-react";
 import { OnboardingFlow } from "./_flows/onboarding-flow";
+import { Skeleton } from "~/components/ui/skeleton";
 
 export default function OnboardingPage() {
   return (
     <main className="p-4">
       <div className="mx-auto grid max-w-4xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:grid-cols-2 direction-reverse">
-        <OnboardingFlow />
+        <Suspense fallback={<Skeleton className="h-full" />}>
+          <OnboardingFlow />
+        </Suspense>
         <section className="flex flex-col text-gray-600 gap-8 md:order-first">
           <Link href="/" className="flex items-center gap-2 font-semibold">
             <Image
